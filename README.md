@@ -1,38 +1,43 @@
-# weather-app
+# اپ آب و هوا
 
-This template should help get you started developing with Vue 3 in Vite.
+یه اپ آب و هوای فارسی با پیش‌بینی ۵ روزه، پیشنهاد لباس و مقایسه دو شهر.
 
-## Recommended IDE Setup
+![Vue](https://img.shields.io/badge/Vue-3-42b883?logo=vue.js)
+![Vite](https://img.shields.io/badge/Vite-latest-646cff?logo=vite)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## ویژگی‌ها
 
-## Recommended Browser Setup
+- جستجوی شهر با Open-Meteo (بدون نیاز به API Key)
+- پیش‌بینی ۵ روزه با آیکون
+- پیشنهاد لباس بر اساس دما و وضعیت هوا
+- مقایسه دو شهر
+- تاریخچه جستجو با localStorage
+- تشخیص موقعیت کاربر
+- نصب روی موبایل (PWA)
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## نصب
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
 
-### Compile and Minify for Production
+تکنولوژی‌ها
+Vue 3 + Composition API
 
-```sh
-npm run build
-```
+Vite
+
+Pinia
+
+Vue Router
+
+vite-plugin-pwa
+
+API
+داده‌ها از Open-Meteo گرفته می‌شن. رایگان، بدون ثبت‌نام، و بدون فیلتر.
+سازنده
+علیرضا سیفی
+
+LinkedIn: alireza-seifi-iteng
+
+ایمیل: alireza.seifi.dev@gmail.com
