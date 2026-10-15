@@ -1,0 +1,56 @@
+/* ============================================
+   Weather App - Base Styles (RTL)
+   ============================================ */
+
+:root {
+  --primary: #42b883;
+  --primary-dark: #369870;
+  --primary-light: #e8f5f0;
+  --navy: #2c3e50;
+  --gray: #6b7280;
+  --gray-light: #e5e7eb;
+  --white: #ffffff;
+  --off-white: #f9fafb;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --radius: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #f0f9f5 0%, #e8f5f0 100%);
+  min-height: 100vh;
+  color: var(--navy);
+  direction: rtl;
+  text-align: right;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+  direction: rtl;
+  text-align: right;
+}
+
+/* ورودی‌های لاتین (اختیاری) */
+input.ltr {
+  direction: ltr;
+  text-align: left;
+}

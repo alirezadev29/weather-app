@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ساخت آیکون</title>
+  <style>
+    body { font-family: sans-serif; padding: 40px; text-align: center; }
+    button { padding: 15px 30px; font-size: 18px; cursor: pointer; background: #1a7a5c; color: white; border: none; border-radius: 10px; }
+    canvas { display: none; }
+  </style>
+</head>
+<body>
+  <h2>روی دکمه بزن تا آیکون‌ها دانلود بشن</h2>
+  <button onclick="make(192)">دانلود آیکون ۱۹۲</button>
+  <button onclick="make(512)">دانلود آیکون ۵۱۲</button>
+
+  <script>
+    function make(size) {
+      const canvas = document.createElement('canvas')
+      canvas.width = size
+      canvas.height = size
+      const ctx = canvas.getContext('2d')
+
+      // پس‌زمینه سبز
+      ctx.fillStyle = '#1a7a5c'
+      ctx.fillRect(0, 0, size, size)
+
+      // خورشید
+      const cx = size / 2
+      const cy = size / 2
+      const r = size * 0.15
+
+      ctx.fillStyle = '#FFD966'
+      ctx.beginPath()
+      ctx.arc(cx, cy, r, 0, Math.PI * 2)
+      ctx.fill()
+
+      // اشعه‌ها
+      ctx.strokeStyle = '#FFD966'
+      ctx.lineWidth = size * 0.02
+      ctx.lineCap = 'round'
+      for (let i = 0; i < 8; i++) {
+        const angle = (Math.PI * 2 * i) / 8
+        const x1 = cx + Math.cos(angle) * r * 1.4
+        const y1 = cy + Math.sin(angle) * r * 1.4
+        const x2 = cx + Math.cos(angle) * r * 2
+        const y2 = cy + Math.sin(angle) * r * 2
+        ctx.beginPath()
+        ctx.moveTo(x1, y1)
+        ctx.lineTo(x2, y2)
+        ctx.stroke()
+      }
+
+      // دانلود
+      const a = document.createElement('a')
+      a.download = `icon-${size}.png`
+      a.href = canvas.toDataURL('image/png')
+      a.click()
+    }
+  </script>
+</body>
+</html>
